@@ -1,0 +1,58 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sunrise Pebbles</title>
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <section class="contact-section">
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We're here to assist you! Get in touch with us for any inquiries, orders, or feedback.</p>
+        </div>
+        
+        <div class="contact-details">
+            <div class="details">
+                <h2>Working Hours</h2>
+                <p><strong>Monday to Sunday:</strong> 8:00 AM - 5:00 PM</p>
+            </div>
+            <div class="details">
+                <h2>Phone Number</h2>
+                <p><strong>+27 75 281 9956</strong></p>
+            </div>
+            <div class="details">
+                <h2>Email</h2>
+                <p><strong><a href="mailto:sunrisepebbles@icloud.com">sunrisepebbles@icloud.com</a></strong></p>
+            </div>
+        </div>
+        
+        <div class="contact-form-container">
+            <h2>Reach Out To Us</h2>
+            <form id="contactForm" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn">Send Message</button>
+            </form>
+            <div id="responseMessage" class="response-message"></div>
+        </div>
+    </section>
+
+    <script src="scripts/contact.js"></script>
+</body>
+</html>

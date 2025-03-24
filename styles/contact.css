@@ -1,0 +1,117 @@
+/* contact.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/peb.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-header {
+    margin-bottom: 40px;
+}
+
+.contact-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.contact-header p {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* Contact Details */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.details h2 {
+    font-size: 24px;
+    color: gold;
+}
+
+.details p {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.details a {
+    color: gold;
+    text-decoration: none;
+}
+
+.details a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background: rgba(255, 215, 0, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact-form-container h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #0B3D2E;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #16DB65;
+}
+
+.response-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: gold;
+}
