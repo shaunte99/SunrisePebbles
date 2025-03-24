@@ -1,117 +1,178 @@
 /* contact.css */
+
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/peb.png');
+    box-sizing: border-box;
+    background-image: url('images/contact-background.jpg'); /* Correct link to your background image */
     background-size: cover;
     background-position: center;
-    color: white;
+    color: #fff;
 }
 
-/* Contact Section */
-.contact-section {
+.contact-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
     text-align: center;
-    padding: 50px;
-    background: rgba(0, 0, 0, 0.5);
 }
 
-.contact-header {
-    margin-bottom: 40px;
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
-.contact-header h1 {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.contact-header p {
-    font-size: 18px;
-    font-weight: normal;
+h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 /* Contact Details */
-.contact-details {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
+.contact-info {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contact info */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
 }
 
-.details h2 {
-    font-size: 24px;
-    color: gold;
+.contact-info p {
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
-.details p {
-    font-size: 18px;
-    font-weight: normal;
-}
-
-.details a {
-    color: gold;
-    text-decoration: none;
-}
-
-.details a:hover {
-    text-decoration: underline;
-}
-
-/* Contact Form */
-.contact-form-container {
-    background: rgba(255, 215, 0, 0.8);
-    border-radius: 10px;
-    padding: 30px;
-    width: 60%;
-    margin: 0 auto;
-}
-
-.contact-form-container h2 {
-    font-size: 30px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    font-size: 18px;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-}
-
-.form-group textarea {
-    resize: vertical;
+.contact-info span {
+    font-weight: bold;
 }
 
 button {
-    background-color: #0B3D2E;
+    background-color: #28a745; /* Green color for submit button */
     color: white;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #16DB65;
+    background-color: #218838; /* Darker green on hover */
 }
 
-.response-message {
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
     margin-top: 20px;
-    font-size: 18px;
-    color: gold;
+    background: rgba(0, 0, 0, 0.7); /* Form background with transparency */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form .form-group label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+form .form-group input, form .form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+form .form-group input {
+    height: 40px;
+}
+
+form .form-group textarea {
+    height: 100px;
+}
+
+form .form-group input:focus, form .form-group textarea:focus {
+    outline: none;
+    border: 2px solid #28a745;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact-container {
+        padding: 10px;
+    }
+
+    .contact-info {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    form {
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    form .form-group label {
+        font-size: 1rem;
+    }
+
+    form .form-group input, form .form-group textarea {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+/* Small Devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-container {
+        padding: 5px;
+    }
+
+    .contact-info {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    form .form-group label {
+        font-size: 1rem;
+    }
+
+    form .form-group input, form .form-group textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }
