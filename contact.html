@@ -1,4 +1,3 @@
-<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,50 +7,56 @@
     <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
-    <section class="contact-section">
-        <div class="contact-header">
-            <h1>Contact Us</h1>
-            <p>We're here to assist you! Get in touch with us for any inquiries, orders, or feedback.</p>
-        </div>
-        
-        <div class="contact-details">
-            <div class="details">
-                <h2>Working Hours</h2>
-                <p><strong>Monday to Sunday:</strong> 8:00 AM - 5:00 PM</p>
-            </div>
-            <div class="details">
-                <h2>Phone Number</h2>
-                <p><strong>+27 75 281 9956</strong></p>
-            </div>
-            <div class="details">
-                <h2>Email</h2>
-                <p><strong><a href="mailto:sunrisepebbles@icloud.com">sunrisepebbles@icloud.com</a></strong></p>
-            </div>
-        </div>
-        
-        <div class="contact-form-container">
-            <h2>Reach Out To Us</h2>
-            <form id="contactForm" method="post">
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-info">
+            <h2>📍 Our Location</h2>
+            <p>Beyers Naudé Drive, Muldersdrift</p>
+            
+            <h2>📞 Contact Numbers</h2>
+            <p>📱 075 281 9956</p>
+            <p>📱 072 760 4021</p>
+
+            <h2>🕒 Business Hours</h2>
+            <p>Monday - Sunday: <span>08:00 - 17:00</span></p>
+        </section>
+
+        <!-- Interactive Contact Form -->
+        <section class="contact-form">
+            <h2>📩 Get In Touch</h2>
+            <form id="contactForm">
                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" required></textarea>
                 </div>
 
-                <button type="submit" id="submitBtn">Send Message</button>
+                <button type="submit">Send Message</button>
             </form>
-            <div id="responseMessage" class="response-message"></div>
-        </div>
-    </section>
+            <p id="formMessage"></p>
+        </section>
+
+        <!-- Google Maps -->
+        <section class="map-section">
+            <h2>📍 Find Us on Google Maps</h2>
+            <iframe src="https://maps.google.com/maps?q=Beyers%20Naudé%20Drive,%20Muldersdrift&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </section>
+    </main>
 
     <script src="scripts/contact.js"></script>
 </body>

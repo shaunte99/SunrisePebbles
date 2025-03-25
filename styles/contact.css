@@ -1,178 +1,145 @@
-/* contact.css */
+/* styles/contact.css */
 
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url('images/contact-background.jpg'); /* Correct link to your background image */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.contact-container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
+header {
+    background-color: #028c42;
+    color: white;
     text-align: center;
+    padding: 20px;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #fff;
+/* Contact Container */
+.contact-container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Contact Info, Form & Map Section */
+.contact-info, .contact-form, .map-section {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
+    color: #028c42;
+    margin-bottom: 10px;
 }
 
-/* Contact Details */
-.contact-info {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contact info */
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-}
-
+/* Contact Info */
 .contact-info p {
-    font-size: 1rem;
-    margin: 10px 0;
+    font-size: 1.1rem;
+    margin: 5px 0;
 }
 
-.contact-info span {
+/* Email Text (Changed to Yellow) */
+.contact-info a {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: gold;
+}
+
+/* Contact Form */
+.contact-form label {
     font-weight: bold;
 }
 
-button {
-    background-color: #28a745; /* Green color for submit button */
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #218838; /* Darker green on hover */
-}
-
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 600px;
+input, textarea {
     width: 100%;
-    margin-top: 20px;
-    background: rgba(0, 0, 0, 0.7); /* Form background with transparency */
-    padding: 20px;
-    border-radius: 8px;
-}
-
-form .form-group {
-    margin-bottom: 15px;
-}
-
-form .form-group label {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-form .form-group input, form .form-group textarea {
     padding: 10px;
-    font-size: 1rem;
-    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: none;
+    font-size: 1rem;
 }
 
-form .form-group input {
-    height: 40px;
-}
-
-form .form-group textarea {
+textarea {
     height: 100px;
 }
 
-form .form-group input:focus, form .form-group textarea:focus {
-    outline: none;
-    border: 2px solid #28a745;
+/* Submit Button */
+button {
+    background-color: #028c42;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
+button:hover {
+    background-color: #01692e;
+}
 
+/* Google Maps */
+.map-section iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Contact Section Enhancements */
+.contact-highlight {
+    text-align: center;
+    padding: 15px;
+    background: gold;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-highlight a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-highlight a:hover {
+    text-decoration: underline;
+    color: darkorange;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-container {
+        width: 100%;
+        padding: 10px;
+    }
+    
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
-    .contact-container {
+    input, textarea {
+        font-size: 1rem;
+    }
+
+    .contact-highlight {
+        font-size: 16px;
         padding: 10px;
-    }
-
-    .contact-info {
-        margin: 10px 0;
-        padding: 15px;
-    }
-
-    button {
-        padding: 10px 15px;
-        font-size: 1rem;
-    }
-
-    form {
-        margin-top: 10px;
-        padding: 15px;
-    }
-
-    form .form-group label {
-        font-size: 1rem;
-    }
-
-    form .form-group input, form .form-group textarea {
-        font-size: 1rem;
-        padding: 8px;
-    }
-}
-
-/* Small Devices */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .contact-container {
-        padding: 5px;
-    }
-
-    .contact-info {
-        margin: 10px 0;
-        padding: 10px;
-    }
-
-    form {
-        padding: 10px;
-    }
-
-    form .form-group label {
-        font-size: 1rem;
-    }
-
-    form .form-group input, form .form-group textarea {
-        font-size: 0.9rem;
-        padding: 8px;
     }
 }

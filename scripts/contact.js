@@ -1,17 +1,23 @@
-// contact.js
+// scripts/contact.js
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents default form submission
 
-    // Grab form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let formMessage = document.getElementById("formMessage");
 
-    // Display a response message (could also be sent to a server)
-    const responseMessage = document.getElementById('responseMessage');
-    responseMessage.textContent = `Thank you, ${name}! Your message has been received. We will get back to you at ${email} as soon as possible.`;
+    if (name === "" || email === "" || message === "") {
+        formMessage.style.color = "red";
+        formMessage.textContent = "⚠️ Please fill in all fields!";
+        return;
+    }
 
-    // Clear the form after submission
-    document.getElementById('contactForm').reset();
+    // Simulate form submission (Replace this with actual backend logic)
+    formMessage.style.color = "green";
+    formMessage.textContent = "✅ Message sent successfully! We will get back to you soon.";
+
+    // Clear form fields
+    document.getElementById("contactForm").reset();
 });

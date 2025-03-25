@@ -10,4 +10,14 @@ document.addEventListener("DOMContentLoaded", function() {
             product.style.display = productName.includes(filter) ? "block" : "none";
         });
     });
+
+    // Button Click Animation
+    const businessBtn = document.querySelector(".business-btn");
+    businessBtn.addEventListener("click", function() {
+        this.style.boxShadow = "0px 0px 30px rgba(255, 215, 0, 1)";
+        this.style.transform = "scale(1.1)";
+        setTimeout(() => {
+            this.style.transform = "scale(1)";
+        }, 200);
+    });
 });
